@@ -1396,4 +1396,4 @@ module.exports={name:"@cybertec/rjsf-material-ui",version:"0.1.0",main:"dist/ind
 },{"./Menu":"qZ7j"}],"zo2T":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0}),require("react-app-polyfill/ie11");var t=e(require("react")),r=e(require("react-dom")),u=e(require("@material-ui/core/CssBaseline")),l=e(require("./body")),a=e(require("./examples")),n=e(require("./menu")),i=function(){var e=t.default.useState(a.default.simple),r=e[0],i=e[1];return t.default.createElement("div",null,t.default.createElement(u.default,null),t.default.createElement(n.default,{onSelectMenuItem:function(e){return function(){return i(e)}}}),t.default.createElement(l.default,{selectedDemo:r}))};r.default.render(t.default.createElement(i,null),document.getElementById("root"));
 },{"react-app-polyfill/ie11":"3Nq1","react":"ccIB","react-dom":"HcD6","@material-ui/core/CssBaseline":"Wcgp","./body":"SHNt","./examples":"MgPn","./menu":"XyKh"}]},{},["zo2T"], null)
-//# sourceMappingURL=rjsf-material-ui/src.d2275d47.js.map
+//# sourceMappingURL=src.d2275d47.js.map
