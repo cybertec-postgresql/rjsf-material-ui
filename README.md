@@ -139,7 +139,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@postgressupport](https://twitter.com/postgressupport) - office@cybertec.at
+Cybertec TEAM - [@postgressupport](https://twitter.com/postgressupport) - office@cybertec.at
 
 Project Link: [https://cybertec-postgresql.github.io/rjsf-material-ui](https://cybertec-postgresql.github.io/rjsf-material-ui)
 
