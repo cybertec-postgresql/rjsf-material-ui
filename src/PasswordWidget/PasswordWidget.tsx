@@ -5,10 +5,6 @@ import InputLabel from '@material-ui/core/InputLabel';
 
 import { WidgetProps } from 'react-jsonschema-form';
 
-type CustomWidgetProps = WidgetProps & {
-  options: any
-};
-
 const PasswordWidget = ({
   id,
   required,
@@ -20,8 +16,8 @@ const PasswordWidget = ({
   onBlur,
   onChange,
   options,
-  autofocus
-}: CustomWidgetProps) => {
+  autofocus,
+}: WidgetProps) => {
   const _onChange = ({
     target: { value },
   }: React.ChangeEvent<HTMLInputElement>) =>
