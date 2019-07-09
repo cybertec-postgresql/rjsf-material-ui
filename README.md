@@ -22,7 +22,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/cybertec-postgresql/rjsf-material-ui">
-    <img src="rjsf-material-ui-logo.png" alt="Logo" width="120" height="120">
+    <img src="rjsf-material-ui-logo.png" alt="Logo" width="140" height="120">
   </a>
 
   <h3 align="center">rjsf-material-ui</h3>
@@ -142,7 +142,7 @@ Project Link: [https://cybertec-postgresql.github.io/rjsf-material-ui](https://c
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[build-shield]: https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square
+[build-shield]: https://img.shields.io/circleci/build/github/cybertec-postgresql/rjsf-material-ui.svg?style=flat-square&token=a58b0890f96bff2b53eef0f4d9c9e5d16eec2200
 [build-url]: #
 [contributors-shield]: https://img.shields.io/badge/contributors-1-orange.svg?style=flat-square
 [contributors-url]: https://github.com/cybertec-postgresql/rjsf-material-ui/graphs/contributors
