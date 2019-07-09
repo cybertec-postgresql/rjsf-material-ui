@@ -33,7 +33,7 @@
   <h3 align="center">rjsf-material-ui</h3>
 
   <p align="center">
-    Material-ui theme, fields and widgets for `react-jsonschema-form`.
+  Material-UI theme, fields and widgets for <a href="https://github.com/mozilla-services/react-jsonschema-form/"><code>react-jsonschema-form</code></a>.
     <br />
     <a href="https://github.com/cybertec-postgresql/rjsf-material-ui"><strong>Explore the docs »</strong></a>
     <br />
@@ -69,11 +69,12 @@
 
 [![rjsf-material-ui Screen Shot][product-screenshot]](https://cybertec-postgresql.github.io/rjsf-material-ui)
 
-Export `material-ui` theme, fields and widgets for `react-jsonschema-form`.
+Exports `material-ui` theme, fields and widgets for `react-jsonschema-form`.
 
 ### Built With
+
 * [react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form/)
-* [Material-ui](https://material-ui.com/)
+* [Material-UI](https://material-ui.com/)
 * [Typescript](https://www.typescriptlang.org/)
 
 
@@ -82,12 +83,16 @@ Export `material-ui` theme, fields and widgets for `react-jsonschema-form`.
 ## Getting Started
 
 ### Prerequisites
-You have to add as dependency `@material-ui/core`, `@material-ui/icons` and `@material-ui/lab`.
+
+- `@material-ui/core >= 4.2.0` ([in 4.2.0, the `slider` component was added to the core](https://github.com/mui-org/material-ui/pull/16416))
+- `@material-ui/icons`
+- `react-jsonschema-form >= 1.6.0` ([in 1.6.0, the `withTheme` HOC was added](https://github.com/mozilla-services/react-jsonschema-form/pull/1226))
 ```sh
-yarn add @material-ui/core @material-ui/icons @material-ui/lab
+yarn add @material-ui/core @material-ui/icons react-jsonschema-form
 ```
 
 ### Installation
+
 ```sh
 yarn add rjsf-material-ui
 ```
