@@ -1,0 +1,49 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2.1
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:8.15
+
+commands:
+  install_js:
+    steps:
+      - restore_cache:
+          keys:
+            - v2-yarn-sha-{{ checksum "yarn.lock" }}
+            - v2-yarn-sha-
+      - run:
+          name: Install js dependencies
+          command: yarn
+      - save_cache:
+          key: v2-yarn-sha-{{ checksum "yarn.lock" }}
+          paths: node_modules
+
+jobs:
+  test_unit:
+    <<: *defaults
+    steps:
+      - checkout
+      - install_js
+      - run:
+          name: run the tests
+          command: yarn test
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - install_js
+      - run:
+          name: check if building works
+          command: yarn build
+
+workflows:
+  version: 2
+  pipeline:
+    jobs:
+      - test_unit
+      - build
