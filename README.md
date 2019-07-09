@@ -5,10 +5,6 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -17,17 +13,16 @@
 *** for build-url, contributors-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Build Status][build-shield]][build-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/cybertec-postgresql/rjsf-material-ui">
-    <img src="material-ui-logo.svg" alt="Logo" width="80" height="80">
+    <img src="rjsf-material-ui-logo.png" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">rjsf-material-ui</h3>
@@ -46,25 +41,23 @@
   </p>
 </p>
 
-
-
 <!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-
-
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 [![rjsf-material-ui Screen Shot][product-screenshot]](https://cybertec-postgresql.github.io/rjsf-material-ui)
@@ -73,13 +66,12 @@ Exports `material-ui` theme, fields and widgets for `react-jsonschema-form`.
 
 ### Built With
 
-* [react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form/)
-* [Material-UI](https://material-ui.com/)
-* [Typescript](https://www.typescriptlang.org/)
-
-
+- [react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form/)
+- [Material-UI](https://material-ui.com/)
+- [Typescript](https://www.typescriptlang.org/)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 ### Prerequisites
@@ -87,6 +79,7 @@ Exports `material-ui` theme, fields and widgets for `react-jsonschema-form`.
 - `@material-ui/core >= 4.2.0` ([in 4.2.0, the `slider` component was added to the core](https://github.com/mui-org/material-ui/pull/16416))
 - `@material-ui/icons`
 - `react-jsonschema-form >= 1.6.0` ([in 1.6.0, the `withTheme` HOC was added](https://github.com/mozilla-services/react-jsonschema-form/pull/1226))
+
 ```sh
 yarn add @material-ui/core @material-ui/icons react-jsonschema-form
 ```
@@ -97,31 +90,31 @@ yarn add @material-ui/core @material-ui/icons react-jsonschema-form
 yarn add rjsf-material-ui
 ```
 
-
-
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 ```javascript
-import { withTheme } from "react-jsonschema-form";
-import { Theme as MuiTheme } from "rjsf-material-ui";
+import { withTheme } from 'react-jsonschema-form';
+import { Theme as MuiTheme } from 'rjsf-material-ui';
 
 const Form = withTheme(MuiTheme);
 ```
+
 or
+
 ```javascript
-import MuiForm from "rjsf-material-ui";
+import MuiForm from 'rjsf-material-ui';
 ```
 
-
 <!-- ROADMAP -->
+
 ## Roadmap
 
 See the [open issues](https://cybertec-postgresql.github.io/rjsf-material-ui/issues) for a list of proposed features (and known issues).
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -132,27 +125,23 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Cybertec TEAM - [@postgressupport](https://twitter.com/postgressupport) - office@cybertec.at
 
 Project Link: [https://cybertec-postgresql.github.io/rjsf-material-ui](https://cybertec-postgresql.github.io/rjsf-material-ui)
 
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [build-shield]: https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square
 [build-url]: #
 [contributors-shield]: https://img.shields.io/badge/contributors-1-orange.svg?style=flat-square
