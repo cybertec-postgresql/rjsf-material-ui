@@ -11,7 +11,6 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.1.2",
     "classnames": "^2.2.6",
     "codemirror": "^5.48.0",
@@ -20,6 +19,7 @@
   },
   "alias": {
     "@material-ui/core": "../node_modules/@material-ui/core",
+    "@material-ui/icons": "../node_modules/@material-ui/icons",
     "react": "../node_modules/react",
     "react-dom": "../node_modules/react-dom/profiling",
     "scheduler/tracing": "../node_modules/scheduler/tracing-profiling"
