@@ -13,8 +13,7 @@
     "build": "tsdx build",
     "clean": "rimraf dist",
     "test": "tsdx test --env=jsdom",
-    "prepublish": "run-s clean build",
-    "publish": "np"
+    "prepublish": "run-s clean build"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.2.0",
