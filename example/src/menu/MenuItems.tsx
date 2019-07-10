@@ -23,11 +23,12 @@ export default withStyles(menuStyles)(
     >
       <List subheader={<ListSubheader component="div">Showcase</ListSubheader>}>
         {keys(examples).map(e => (
-          <ListItem key={e} button>
-            <ListItemText
-              primary={examples[e].title}
-              onClick={onSelectMenuItem(examples[e])}
-            />
+          <ListItem
+            key={e}
+            button={true}
+            onClick={onSelectMenuItem(examples[e])}
+          >
+            <ListItemText primary={examples[e].title} />
           </ListItem>
         ))}
       </List>

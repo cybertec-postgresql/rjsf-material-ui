@@ -9,7 +9,7 @@ import menuStyles from './menu-styles';
 
 export default withStyles(menuStyles)(
   ({ classes, open, toggleDrawer, onSelectMenuItem }: any) => (
-    <div>
+    <>
       <Hidden only={['xs', 'sm', 'md']}>
         <Drawer variant={'permanent'} className={classes.permanentLeftDrawer}>
           <MenuItems
@@ -30,6 +30,6 @@ export default withStyles(menuStyles)(
           />
         </Drawer>
       </Hidden>
-    </div>
+    </>
   )
 );

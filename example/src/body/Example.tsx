@@ -2,32 +2,32 @@ import React from 'react';
 
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
-import { createStyles, withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
+
+import { JSONSchema6 } from 'json-schema';
 
 import styles from './example-styles';
 import Source from './Source';
 
 import Form from '../../../src';
 
-const formStyles = theme =>
-  createStyles({
-    field: {
-      paddingLeft: theme.spacing.unit * 4,
-    },
-    formButtons: {
-      order: 2,
-    },
-    root: {
-      display: 'flex',
-      padding: theme.spacing.unit,
-    },
-  });
+const liveSettingsSchema: JSONSchema6 = {
+  type: 'object',
+  properties: {
+    validate: { type: 'boolean', title: 'Live validation' },
+    disabled: { type: 'boolean', title: 'Disable whole form' },
+  },
+};
 
 class Example extends React.Component<any, any> {
   state = {
     ...this.props.data,
+    liveSettings: {
+      validate: true,
+      disabled: false,
+    },
   };
 
   componentWillReceiveProps = ({ data }) => {
@@ -47,25 +47,39 @@ class Example extends React.Component<any, any> {
   };
 
   onSubmit = value => {
-    console.log('onSubmit:', value); // eslint-disable-line no-console
+    console.log('onSubmit:', value);
   };
 
   onCancel = () => {
     const { data } = this.props;
+
     this.setState({
       ...data,
     });
   };
 
+  setLiveSettings = ({ formData }: any) =>
+    this.setState({ liveSettings: formData });
+
   render() {
     const { data, classes } = this.props;
     const { title } = data;
-    const { schema, uiSchema, formData } = this.state;
+    const { schema, uiSchema, formData, liveSettings } = this.state;
+
     return (
       <Paper className={classes.root}>
-        <Typography component="h4" variant="h4">
-          {title}
-        </Typography>
+        <>
+          <Typography component="h4" variant="h4">
+            {title}
+          </Typography>
+          <Form
+            schema={liveSettingsSchema}
+            formData={liveSettings}
+            onChange={this.setLiveSettings}
+          >
+            <div />
+          </Form>
+        </>
         <br />
         <div className={classes.ctr}>
           <div className={classes.sourceCtr}>
@@ -98,8 +112,8 @@ class Example extends React.Component<any, any> {
                   formData={formData}
                   onSubmit={this.onSubmit}
                   onChange={this.onFormChanged}
-                  //showErrorList={showErrorList}
-                  //showHelperError={showHelperError}
+                  liveValidate={liveSettings.validate}
+                  disabled={liveSettings.disabled}
                 >
                   <Box mt={2}>
                     <Button
