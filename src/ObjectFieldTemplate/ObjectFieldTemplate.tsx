@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import Grid from "@material-ui/core/Grid";
+import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/styles';
 
-import { ObjectFieldTemplateProps } from "react-jsonschema-form";
+import { ObjectFieldTemplateProps } from 'react-jsonschema-form';
 
 const useStyles = makeStyles({
   root: {
-    marginTop: 10
-  }
-})
+    marginTop: 10,
+  },
+});
 
 const ObjectFieldTemplate = ({
   DescriptionField,
@@ -19,17 +19,24 @@ const ObjectFieldTemplate = ({
   properties,
   required,
   uiSchema,
-  idSchema
+  idSchema,
 }: ObjectFieldTemplateProps) => {
   const classes = useStyles();
 
   return (
     <>
-      {(uiSchema["ui:title"] || title) && (
-        <TitleField id={`${idSchema.$id}-title`} title={title} required={required} />
+      {(uiSchema['ui:title'] || title) && (
+        <TitleField
+          id={`${idSchema.$id}-title`}
+          title={title}
+          required={required}
+        />
       )}
       {description && (
-        <DescriptionField id={`${idSchema.$id}-description`} description={description} />
+        <DescriptionField
+          id={`${idSchema.$id}-description`}
+          description={description}
+        />
       )}
       <Grid container={true} spacing={2} className={classes.root}>
         {properties.map((element: any, index: number) => (

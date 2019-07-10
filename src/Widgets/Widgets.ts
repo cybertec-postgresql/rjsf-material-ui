@@ -9,13 +9,13 @@ import TextWidget from '../TextWidget/TextWidget';
 import UpDownWidget from '../UpDownWidget/UpDownWidget';
 
 export default {
-    CheckboxWidget,
-    CheckboxesWidget,
-    PasswordWidget,
-    RadioWidget,
-    RangeWidget,
-    SelectWidget,
-    TextareaWidget,
-    TextWidget,
-    UpDownWidget
-}
+  CheckboxWidget,
+  CheckboxesWidget,
+  PasswordWidget,
+  RadioWidget,
+  RangeWidget,
+  SelectWidget,
+  TextareaWidget,
+  TextWidget,
+  UpDownWidget,
+};

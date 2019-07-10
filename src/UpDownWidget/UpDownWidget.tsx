@@ -13,7 +13,7 @@ const UpDownWidget = ({
   label,
   value,
   onChange,
-  autofocus
+  autofocus,
 }: WidgetProps) => {
   const _onChange = ({
     target: { value },

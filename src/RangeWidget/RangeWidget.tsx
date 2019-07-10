@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { rangeSpec } from 'react-jsonschema-form/lib/utils';
 import { WidgetProps } from 'react-jsonschema-form';
 
-function RangeWidget(props: WidgetProps) {
+const RangeWidget = (props: WidgetProps) => {
   const {
     value,
     //readonly,
@@ -29,6 +29,7 @@ function RangeWidget(props: WidgetProps) {
   const _onChange = ({}, value: any) => {
     return props.onChange(value === '' ? options.emptyValue : value);
   };
+
   return (
     <Grid container alignItems="flex-end">
       <Grid item xs>
@@ -39,6 +40,6 @@ function RangeWidget(props: WidgetProps) {
       </Grid>
     </Grid>
   );
-}
+};
 
 export default RangeWidget;

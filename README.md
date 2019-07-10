@@ -22,7 +22,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/cybertec-postgresql/rjsf-material-ui">
-    <img src="rjsf-material-ui-logo.png" alt="Logo" width="140" height="120">
+    <img src="https://raw.githubusercontent.com/cybertec-postgresql/rjsf-material-ui/master/rjsf-material-ui-logo.png" alt="Logo" width="140" height="120">
   </a>
 
   <h3 align="center">rjsf-material-ui</h3>

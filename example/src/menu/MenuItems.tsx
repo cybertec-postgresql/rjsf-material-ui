@@ -12,20 +12,25 @@ import examples from '../examples';
 
 import menuStyles from './menu-styles';
 
-export default withStyles(menuStyles)(({ toggleDrawer, classes, onSelectMenuItem }: any) => (
-  <div
-    tabIndex={0}
-    role='button'
-    onClick={toggleDrawer(false)}
-    onKeyDown={toggleDrawer(false)}
-    className={classes.drawerList}
-  >
-    <List subheader={<ListSubheader component='div'>Showcase</ListSubheader>}>
-      {keys(examples).map(e => (
-        <ListItem key={e} button>
-          <ListItemText primary={examples[e].title} onClick={onSelectMenuItem(examples[e])} />
-        </ListItem>
-      ))}
-    </List>
-  </div>
-));
+export default withStyles(menuStyles)(
+  ({ toggleDrawer, classes, onSelectMenuItem }: any) => (
+    <div
+      tabIndex={0}
+      role="button"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+      className={classes.drawerList}
+    >
+      <List subheader={<ListSubheader component="div">Showcase</ListSubheader>}>
+        {keys(examples).map(e => (
+          <ListItem key={e} button>
+            <ListItemText
+              primary={examples[e].title}
+              onClick={onSelectMenuItem(examples[e])}
+            />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  )
+);

@@ -14,7 +14,7 @@ const FieldTemplate = ({
   displayLabel,
   rawErrors = [],
   rawHelp,
-  rawDescription
+  rawDescription,
 }: FieldTemplateProps) => {
   return (
     <FormControl fullWidth={true} error={rawErrors.length ? true : false}>

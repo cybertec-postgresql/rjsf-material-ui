@@ -11,11 +11,11 @@ import MenuIcon from '@material-ui/icons/Menu';
 import LeftDrawer from './LeftDrawer';
 import menuStyles from './menu-styles';
 
-import pkg from "../../../package.json"
+import pkg from '../../../package.json';
 
 class RawMenuAppBar extends React.Component<any, any> {
   state = {
-    drawerOpen: false
+    drawerOpen: false,
   };
 
   toggleDrawer = visible => () => {

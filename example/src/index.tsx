@@ -3,12 +3,11 @@ import 'react-app-polyfill/ie11';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import CssBaseLine from "@material-ui/core/CssBaseline";
+import CssBaseLine from '@material-ui/core/CssBaseline';
 
-import Body from "./body";
+import Body from './body';
 import examples from './examples';
-import Menu from "./menu";
-
+import Menu from './menu';
 
 const App = () => {
   const [selectedExample, setSelectedExample] = React.useState(examples.simple);

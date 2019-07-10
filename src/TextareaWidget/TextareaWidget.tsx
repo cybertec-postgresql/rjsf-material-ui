@@ -6,7 +6,7 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 
 type CustomWidgetProps = WidgetProps & {
-  options: any
+  options: any;
 };
 
 const TextareaWidget = ({

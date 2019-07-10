@@ -988,10 +988,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-jsonschema-form@^1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@types/react-jsonschema-form/-/react-jsonschema-form-1.6.1.tgz#d1cf242f7b420815169c0eb355e155cf3b5dd10b"
-  integrity sha512-DKHLLI0YZns7v58jnIy39eXX+seiaBhCGDtFm8ULcr/knxZYxm/vBpCm4GHl4znjXdRXFm8DjkARxqTkamkOfA==
+"@types/react-jsonschema-form@^1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@types/react-jsonschema-form/-/react-jsonschema-form-1.6.2.tgz#52c229b5cad2bca079cd92942f5a4263cefd6c31"
+  integrity sha512-cala+2p8fNolSEJm4rqfJx0HkBavPtvfwF6WISJoFI7I/qpD5p4tXY6oc4oNsoxBHlB1/4FFiJDjLwV9fIIYnA==
   dependencies:
     "@types/json-schema" "*"
     "@types/react" "*"

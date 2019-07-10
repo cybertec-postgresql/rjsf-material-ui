@@ -1,12 +1,16 @@
 import React from 'react';
+
 import classNames from 'classnames';
+
 import { Controlled as CodeMirror } from 'react-codemirror2';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
-import 'codemirror/mode/javascript/javascript'; // eslint-disable-line
+import 'codemirror/mode/javascript/javascript';
+// eslint-disable-line
 import Valid from '@material-ui/icons/CheckCircle';
 import Invalid from '@material-ui/icons/HighlightOff';
 import { withStyles } from '@material-ui/core/styles';
+
 import sourceStyles from './editor-styles';
 
 const cmOptions = {
@@ -18,12 +22,11 @@ const cmOptions = {
   readOnly: false,
 };
 
-const isValid = (value) => {
+const isValid = value => {
   let obj;
   try {
     obj = JSON.parse(value);
-  }
-  catch (e) {
+  } catch (e) {
     return false;
   }
   return obj;
@@ -39,17 +42,17 @@ class Source extends React.Component<any, any> {
     };
   }
 
-  componentWillReceiveProps = (nextProps) => {
+  componentWillReceiveProps = nextProps => {
     const source = JSON.stringify(nextProps.source, null, 2);
     this.setState({
       source,
       valid: isValid(source),
     });
-  }
+  };
 
   onChange = (editor, data, value) => {
     this.setState({ source: value });
-  }
+  };
 
   onBeforeChange = (editor, data, value) => {
     const { onChange } = this.props;
@@ -62,7 +65,7 @@ class Source extends React.Component<any, any> {
     if (parsed && onChange) {
       onChange(parsed);
     }
-  }
+  };
 
   render() {
     const { source, valid } = this.state;
