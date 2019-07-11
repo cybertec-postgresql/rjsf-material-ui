@@ -35,7 +35,7 @@
     "react-jsonschema-form": "^1.6.1",
     "tsdx": "^0.7.2",
     "tslib": "^1.10.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.3"
   },
   "husky": {
     "hooks": {
