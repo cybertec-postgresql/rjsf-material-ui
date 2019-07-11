@@ -32,6 +32,7 @@ const TextareaWidget = ({
   const _onFocus = ({
     target: { value },
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+
   return (
     <>
       <InputLabel>{label}</InputLabel>

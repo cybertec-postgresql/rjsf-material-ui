@@ -13,11 +13,31 @@ const TextWidget = ({
   label,
   value,
   onChange,
+  onBlur,
+  onFocus,
   autofocus,
+  options,
 }: WidgetProps) => {
   const _onChange = ({
     target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) => onChange(value);
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    let inputValue: any = value;
+
+    if (!inputValue) {
+      if (options.emptyValue === undefined) {
+        inputValue = undefined;
+      } else {
+        inputValue = options.emptyValue;
+      }
+    }
+
+    onChange(inputValue);
+  };
+  const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
+    onBlur(id, value);
+  const _onFocus = ({
+    target: { value },
+  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   return (
     <>
@@ -30,6 +50,8 @@ const TextWidget = ({
         name={name}
         value={value}
         onChange={_onChange}
+        onBlur={_onBlur}
+        onFocus={_onFocus}
       />
     </>
   );
