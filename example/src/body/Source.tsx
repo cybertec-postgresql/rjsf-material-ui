@@ -6,7 +6,7 @@ import { Controlled as CodeMirror } from 'react-codemirror2';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
 import 'codemirror/mode/javascript/javascript';
-// eslint-disable-line
+
 import Valid from '@material-ui/icons/CheckCircle';
 import Invalid from '@material-ui/icons/HighlightOff';
 import { withStyles } from '@material-ui/core/styles';
@@ -14,12 +14,17 @@ import { withStyles } from '@material-ui/core/styles';
 import sourceStyles from './editor-styles';
 
 const cmOptions = {
-  // mode: { name: 'javascript', json: true },
-  // theme: 'material',
-  smartIndent: true,
+  readOnly: false,
+  viewportMargin: Infinity,
+  mode: {
+    name: 'javascript',
+    json: true,
+    statementIndent: 2,
+  },
   lineNumbers: true,
   lineWrapping: true,
-  readOnly: false,
+  indentWithTabs: false,
+  tabSize: 2,
 };
 
 const isValid = value => {
@@ -62,6 +67,7 @@ class Source extends React.Component<any, any> {
       valid: parsed,
       source: value,
     });
+
     if (parsed && onChange) {
       onChange(parsed);
     }
@@ -71,6 +77,7 @@ class Source extends React.Component<any, any> {
     const { source, valid } = this.state;
     const { classes, title } = this.props;
     const Icon = valid ? Valid : Invalid;
+
     return (
       <div className={classes.root}>
         <div className={classNames(classes.ctr, { [classes.invalid]: !valid })}>
@@ -85,6 +92,7 @@ class Source extends React.Component<any, any> {
               value={source}
               onChange={this.onChange}
               onBeforeChange={this.onBeforeChange}
+              autoCursor={true}
               options={cmOptions}
             />
           </div>

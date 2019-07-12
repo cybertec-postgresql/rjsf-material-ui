@@ -30,6 +30,12 @@ class Example extends React.Component<any, any> {
     },
   };
 
+  componentDidCatch() {
+    this.setState({
+      [this.state.backType]: this.state.backSource,
+    });
+  }
+
   componentWillReceiveProps = ({ data }) => {
     this.setState({
       ...data,
@@ -39,6 +45,8 @@ class Example extends React.Component<any, any> {
   onChange = type => value => {
     this.setState({
       [type]: value,
+      backSource: this.state[type],
+      backType: type,
     });
   };
 
@@ -64,7 +72,7 @@ class Example extends React.Component<any, any> {
   render() {
     const { data, classes } = this.props;
     const { title } = data;
-    const { schema, uiSchema, formData, liveSettings } = this.state;
+    const { schema, uiSchema, formData, liveSettings, validate } = this.state;
 
     return (
       <Paper className={classes.root}>
@@ -114,6 +122,7 @@ class Example extends React.Component<any, any> {
                   onChange={this.onFormChanged}
                   liveValidate={liveSettings.validate}
                   disabled={liveSettings.disabled}
+                  validate={validate}
                 >
                   <Box mt={2}>
                     <Button
