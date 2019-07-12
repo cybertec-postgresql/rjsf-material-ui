@@ -25,6 +25,7 @@ class RawMenuAppBar extends React.Component<any, any> {
   render() {
     const { classes, onSelectMenuItem } = this.props;
     const { drawerOpen } = this.state;
+
     return (
       <AppBar position="static" className={classes.toolbar}>
         <Toolbar>

@@ -5,12 +5,17 @@ import FieldTemplate from '../FieldTemplate';
 import ObjectFieldTemplate from '../ObjectFieldTemplate';
 import Widgets from '../Widgets';
 
-const Theme = {
+import { ThemeProps } from 'react-jsonschema-form';
+import { getDefaultRegistry } from 'react-jsonschema-form/lib/utils';
+
+const { fields, widgets } = getDefaultRegistry();
+
+const Theme: ThemeProps = {
   ArrayFieldTemplate,
-  fields: Fields,
+  fields: { ...fields, ...Fields },
   FieldTemplate,
   ObjectFieldTemplate,
-  widgets: Widgets,
+  widgets: { ...widgets, ...Widgets },
   ErrorList,
 };
 
