@@ -8,7 +8,7 @@
     "build": "parcel build src/index.html --public-url .",
     "clean": "rimraf dist",
     "predeploy": "run-s clean build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -m '[skip ci] Update' -u 'CircleCI <lorenz.henk@cybertec.at>'"
   },
   "dependencies": {
     "@material-ui/styles": "^4.1.2",
