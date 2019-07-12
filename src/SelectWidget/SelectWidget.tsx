@@ -5,7 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 
-import { WidgetProps } from 'react-jsonschema-form';
+// import { WidgetProps } from 'react-jsonschema-form';
 import { asNumber, guessType } from 'react-jsonschema-form/lib/utils';
 
 const nums = new Set(['number', 'integer']);
@@ -49,13 +49,15 @@ const SelectWidget = ({
   disabled,
   readonly,
   value,
-  //multiple,
+  multiple,
   autofocus,
   onChange,
   onBlur,
   onFocus,
-}: WidgetProps) => {
+}: any) => {
   const { enumOptions, enumDisabled } = options;
+
+  const emptyValue = multiple ? [] : '';
 
   const _onChange = ({
     target: { value },
@@ -78,10 +80,8 @@ const SelectWidget = ({
         {label || schema.title}
       </InputLabel>
       <Select
-        value={value}
-        //multiple={typeof multiple === "undefined" ? false : multiple}
-        //className={classes.selectEmpty}
-        //value={typeof value === "undefined" ? emptyValue : value}
+        multiple={typeof multiple === 'undefined' ? false : multiple}
+        value={typeof value === 'undefined' ? emptyValue : value}
         required={required}
         disabled={disabled || readonly}
         autoFocus={autofocus}
