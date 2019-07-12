@@ -2,6 +2,7 @@ import React from 'react';
 
 import { WidgetProps } from 'react-jsonschema-form';
 
+import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 
@@ -22,6 +23,7 @@ const TextareaWidget = ({
   onFocus,
   onChange,
   options,
+  schema,
 }: CustomWidgetProps) => {
   const _onChange = ({
     target: { value },
@@ -34,8 +36,12 @@ const TextareaWidget = ({
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   return (
-    <>
-      <InputLabel>{label}</InputLabel>
+    <FormControl
+      fullWidth={true}
+      //error={!!rawErrors}
+      required={required}
+    >
+      <InputLabel>{label || schema.title}</InputLabel>
       <Input
         id={id}
         placeholder={placeholder}
@@ -49,7 +55,7 @@ const TextareaWidget = ({
         onBlur={_onBlur}
         onFocus={_onFocus}
       />
-    </>
+    </FormControl>
   );
 };
 

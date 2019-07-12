@@ -1,43 +1,55 @@
 import React from 'react';
 
-import Slider from '@material-ui/core/Slider';
+import FormControl from '@material-ui/core/FormControl';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider';
+import FormLabel from '@material-ui/core/FormLabel';
 
 import { rangeSpec } from 'react-jsonschema-form/lib/utils';
 import { WidgetProps } from 'react-jsonschema-form';
 
-const RangeWidget = (props: WidgetProps) => {
-  const {
-    value,
-    //readonly,
-    //disabled,
-    //autofocus,
-    //onBlur,
-    //onFocus,
-    options,
-    schema,
-    //formContext,
-    //registry,
-    //rawErrors,
-    label,
-    id,
-  } = props;
-
+const RangeWidget = ({
+  value,
+  readonly,
+  disabled,
+  onBlur,
+  onFocus,
+  options,
+  schema,
+  //formContext,
+  //registry,
+  //rawErrors,
+  onChange,
+  required,
+  label,
+  id,
+}: WidgetProps) => {
   let sliderProps = { value, label, id, ...rangeSpec(schema) };
 
-  const _onChange = ({}, value: any) => {
-    return props.onChange(value === '' ? options.emptyValue : value);
-  };
+  const _onChange = ({}, value: any) =>
+    onChange(value === '' ? options.emptyValue : value);
+  const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
+    onBlur(id, value);
+  const _onFocus = ({
+    target: { value },
+  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   return (
-    <Grid container alignItems="flex-end">
-      <Grid item xs>
-        <Typography id="discrete-slider-custom" gutterBottom={true}>
-          {label}
-        </Typography>
-        <Slider {...sliderProps} onChange={_onChange} />
-      </Grid>
+    <Grid container={true} alignItems="flex-end">
+      <FormControl
+        fullWidth={true}
+        //error={!!rawErrors}
+        required={required}
+      >
+        <FormLabel id={id}>{label}</FormLabel>
+        <Slider
+          {...sliderProps}
+          disabled={disabled || readonly}
+          onChange={_onChange}
+          onBlur={_onBlur}
+          onFocus={_onFocus}
+        />
+      </FormControl>
     </Grid>
   );
 };

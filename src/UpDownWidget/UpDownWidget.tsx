@@ -1,5 +1,6 @@
 import React from 'react';
 
+import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 
@@ -13,14 +14,25 @@ const UpDownWidget = ({
   label,
   value,
   onChange,
+  onBlur,
+  onFocus,
   autofocus,
 }: WidgetProps) => {
   const _onChange = ({
     target: { value },
   }: React.ChangeEvent<HTMLInputElement>) => onChange(value);
+  const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
+    onBlur(id, value);
+  const _onFocus = ({
+    target: { value },
+  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   return (
-    <>
+    <FormControl
+      fullWidth={true}
+      //error={!!rawErrors}
+      required={required}
+    >
       <InputLabel>{label}</InputLabel>
       <Input
         id={id}
@@ -31,8 +43,10 @@ const UpDownWidget = ({
         name={name}
         value={value}
         onChange={_onChange}
+        onBlur={_onBlur}
+        onFocus={_onFocus}
       />
-    </>
+    </FormControl>
   );
 };
 

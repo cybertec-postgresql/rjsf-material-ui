@@ -1,5 +1,6 @@
 import React from 'react';
 
+import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 
@@ -17,22 +18,12 @@ const TextWidget = ({
   onFocus,
   autofocus,
   options,
+  schema,
 }: WidgetProps) => {
   const _onChange = ({
     target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) => {
-    let inputValue: any = value;
-
-    if (!inputValue) {
-      if (options.emptyValue === undefined) {
-        inputValue = undefined;
-      } else {
-        inputValue = options.emptyValue;
-      }
-    }
-
-    onChange(inputValue);
-  };
+  }: React.ChangeEvent<HTMLInputElement>) =>
+    onChange(value === '' ? options.emptyValue : value);
   const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
     onBlur(id, value);
   const _onFocus = ({
@@ -40,8 +31,12 @@ const TextWidget = ({
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   return (
-    <>
-      <InputLabel>{label}</InputLabel>
+    <FormControl
+      fullWidth={true}
+      //error={!!rawErrors}
+      required={required}
+    >
+      <InputLabel>{label || schema.title}</InputLabel>
       <Input
         id={id}
         autoFocus={autofocus}
@@ -53,7 +48,7 @@ const TextWidget = ({
         onBlur={_onBlur}
         onFocus={_onFocus}
       />
-    </>
+    </FormControl>
   );
 };
 

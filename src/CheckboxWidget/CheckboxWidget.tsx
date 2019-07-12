@@ -16,10 +16,20 @@ const CheckboxWidget = (props: WidgetProps) => {
     label,
     autofocus,
     onChange,
+    onBlur,
+    onFocus,
   } = props;
 
+  const _onChange = ({}, checked: boolean) => onChange(checked);
+  const _onBlur = ({
+    target: { value },
+  }: React.FocusEvent<HTMLButtonElement>) => onBlur(id, value);
+  const _onFocus = ({
+    target: { value },
+  }: React.FocusEvent<HTMLButtonElement>) => onFocus(id, value);
+
   return (
-    <FormControl>
+    <FormControl fullWidth={true} required={required}>
       <FormControlLabel
         control={
           <Checkbox
@@ -28,7 +38,9 @@ const CheckboxWidget = (props: WidgetProps) => {
             required={required}
             disabled={disabled || readonly}
             autoFocus={autofocus}
-            onChange={event => onChange(event.target.checked)}
+            onChange={_onChange}
+            onBlur={_onBlur}
+            onFocus={_onFocus}
           />
         }
         label={label}

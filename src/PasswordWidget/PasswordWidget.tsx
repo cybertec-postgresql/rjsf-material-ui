@@ -1,5 +1,6 @@
 import React from 'react';
 
+import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 
@@ -17,6 +18,7 @@ const PasswordWidget = ({
   onChange,
   options,
   autofocus,
+  schema,
 }: WidgetProps) => {
   const _onChange = ({
     target: { value },
@@ -29,8 +31,12 @@ const PasswordWidget = ({
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   return (
-    <>
-      <InputLabel>{label}</InputLabel>
+    <FormControl
+      fullWidth={true}
+      //error={!!rawErrors}
+      required={required}
+    >
+      <InputLabel>{label || schema.title}</InputLabel>
       <Input
         autoFocus={autofocus}
         required={required}
@@ -41,7 +47,7 @@ const PasswordWidget = ({
         onBlur={_onBlur}
         onChange={_onChange}
       />
-    </>
+    </FormControl>
   );
 };
 
