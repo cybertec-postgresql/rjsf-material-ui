@@ -15,6 +15,8 @@
 -->
 
 [![Build Status][build-shield]][build-url]
+[![npm][npm-shield]][npm-url]
+[![npm downloads][npm-dl-shield]][npm-dl-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 
@@ -135,7 +137,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Cybertec TEAM - [@postgressupport](https://twitter.com/postgressupport) - office@cybertec.at
+Cybertec TEAM - [@postgressupport](https://twitter.com/postgressupport) - office@cybertec.at - https://www.cybertec-postgresql.com
 
 Project Link: [https://cybertec-postgresql.github.io/rjsf-material-ui](https://cybertec-postgresql.github.io/rjsf-material-ui)
 
@@ -148,4 +150,9 @@ Project Link: [https://cybertec-postgresql.github.io/rjsf-material-ui](https://c
 [contributors-url]: https://github.com/cybertec-postgresql/rjsf-material-ui/graphs/contributors
 [license-shield]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [license-url]: https://choosealicense.com/licenses/mit
+[npm-shield]: https://img.shields.io/npm/v/rjsf-material-ui/latest.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/rjsf-material-ui
+[npm-dl-shield]: https://img.shields.io/npm/dm/rjsf-material-ui.svg?style=flat-square
+[npm-dl-url]: https://www.npmjs.com/package/rjsf-material-ui
+
 [product-screenshot]: https://raw.githubusercontent.com/cybertec-postgresql/rjsf-material-ui/master/screenshot.png
