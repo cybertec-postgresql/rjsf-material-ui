@@ -1,3 +1,4 @@
+import AltDateWidget from '../AltDateWidget/AltDateWidget';
 import CheckboxWidget from '../CheckboxWidget/CheckboxWidget';
 import CheckboxesWidget from '../CheckboxesWidget/CheckboxesWidget';
 import PasswordWidget from '../PasswordWidget/PasswordWidget';
@@ -9,6 +10,7 @@ import TextWidget from '../TextWidget/TextWidget';
 import UpDownWidget from '../UpDownWidget/UpDownWidget';
 
 export default {
+  AltDateWidget,
   CheckboxWidget,
   CheckboxesWidget,
   PasswordWidget,
