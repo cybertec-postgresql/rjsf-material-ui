@@ -1,8 +1,7 @@
 import React from 'react';
 
 import FormControl from '@material-ui/core/FormControl';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
+import TextField from '@material-ui/core/TextField';
 
 import { WidgetProps } from 'react-jsonschema-form';
 
@@ -36,9 +35,9 @@ const TextWidget = ({
       //error={!!rawErrors}
       required={required}
     >
-      <InputLabel>{label || schema.title}</InputLabel>
-      <Input
+      <TextField
         id={id}
+        label={label || schema.title}
         autoFocus={autofocus}
         required={required}
         disabled={disabled || readonly}

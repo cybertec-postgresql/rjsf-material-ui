@@ -3,8 +3,7 @@ import React from 'react';
 import { WidgetProps } from 'react-jsonschema-form';
 
 import FormControl from '@material-ui/core/FormControl';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
+import TextField from '@material-ui/core/TextField';
 
 type CustomWidgetProps = WidgetProps & {
   options: any;
@@ -41,9 +40,9 @@ const TextareaWidget = ({
       //error={!!rawErrors}
       required={required}
     >
-      <InputLabel>{label || schema.title}</InputLabel>
-      <Input
+      <TextField
         id={id}
+        label={label || schema.title}
         placeholder={placeholder}
         disabled={disabled || readonly}
         value={value}
