@@ -43,15 +43,12 @@ jobs:
   deploy_gh_pages:
     <<: *defaults
     steps:
-      - checkout
-      - install_js
-      - run: cd example
-      - install_js
-      - run: yarn predeploy
       - add_ssh_keys:
           fingerprints:
             - 'd8:e5:d2:27:83:c3:fe:44:15:7a:40:89:5c:5d:ac:29'
-      - run: yarn deploy
+      - checkout
+      - install_js
+      - run: cd example && yarn && yarn predeploy && yarn deploy
 
 workflows:
   version: 2
