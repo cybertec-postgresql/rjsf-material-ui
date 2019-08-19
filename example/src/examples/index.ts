@@ -1,9 +1,11 @@
+import aditionalProperties from './aditional-properties';
+import alternatives from './alternatives';
 import anyOf from './any-of';
 import arrays from './arrays';
-import alternatives from './alternatives';
 import budget from './budget';
 import custom from './custom';
 import customArray from './custom-array';
+import customObject from './custom-object';
 import errors from './errors';
 import large from './large';
 import multipleChoice from './multiple-choice';
@@ -21,12 +23,14 @@ import single from './single';
 import validation from './validation';
 
 export default {
+  aditionalProperties,
+  alternatives,
   anyOf,
   arrays,
-  alternatives,
   budget,
   custom,
   customArray,
+  customObject,
   errors,
   large,
   multipleChoice,

@@ -13,7 +13,7 @@ import examples from '../examples';
 import menuStyles from './menu-styles';
 
 export default withStyles(menuStyles)(
-  ({ toggleDrawer, classes, onSelectMenuItem }: any) => (
+  ({ toggleDrawer, classes, onSelectMenuItem, selectedMenuItem }: any) => (
     <div
       tabIndex={0}
       role="button"
@@ -21,12 +21,19 @@ export default withStyles(menuStyles)(
       onKeyDown={toggleDrawer(false)}
       className={classes.drawerList}
     >
-      <List subheader={<ListSubheader component="div">Showcase</ListSubheader>}>
+      <List
+        subheader={
+          <ListSubheader component="div" className={classes.subheader}>
+            Showcase
+          </ListSubheader>
+        }
+      >
         {keys(examples).map(e => (
           <ListItem
             key={e}
             button={true}
             onClick={onSelectMenuItem(examples[e])}
+            selected={selectedMenuItem === e}
           >
             <ListItemText primary={examples[e].title} />
           </ListItem>

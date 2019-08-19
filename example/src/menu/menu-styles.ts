@@ -14,4 +14,7 @@ export default (theme: Theme) => ({
       marginLeft: theme.spacing(3),
     },
   },
+  subheader: {
+    backgroundColor: '#fff',
+  },
 });

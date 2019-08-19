@@ -18,7 +18,10 @@ const App = () => {
     <div>
       <CssBaseLine />
 
-      <Menu onSelectMenuItem={onSelectMenuItem} />
+      <Menu
+        onSelectMenuItem={onSelectMenuItem}
+        selectedMenuItem={selectedExample.key}
+      />
       <Body selectedDemo={selectedExample} />
     </div>
   );

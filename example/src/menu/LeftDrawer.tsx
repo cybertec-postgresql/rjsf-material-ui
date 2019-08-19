@@ -8,13 +8,20 @@ import MenuItems from './MenuItems';
 import menuStyles from './menu-styles';
 
 export default withStyles(menuStyles)(
-  ({ classes, open, toggleDrawer, onSelectMenuItem }: any) => (
+  ({
+    classes,
+    open,
+    toggleDrawer,
+    onSelectMenuItem,
+    selectedMenuItem,
+  }: any) => (
     <>
       <Hidden only={['xs', 'sm', 'md']}>
         <Drawer variant={'permanent'} className={classes.permanentLeftDrawer}>
           <MenuItems
             toggleDrawer={toggleDrawer}
             onSelectMenuItem={onSelectMenuItem}
+            selectedMenuItem={selectedMenuItem}
           />
         </Drawer>
       </Hidden>
@@ -27,6 +34,7 @@ export default withStyles(menuStyles)(
           <MenuItems
             toggleDrawer={toggleDrawer}
             onSelectMenuItem={onSelectMenuItem}
+            selectedMenuItem={selectedMenuItem}
           />
         </Drawer>
       </Hidden>

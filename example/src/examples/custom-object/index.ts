@@ -3,8 +3,8 @@ import uiSchema from './ui-schema.json';
 import formData from './form-data.json';
 
 export default {
-  key: 'nested',
-  title: 'Nested',
+  key: 'customObject',
+  title: 'Custom Object',
   schema,
   uiSchema,
   formData,

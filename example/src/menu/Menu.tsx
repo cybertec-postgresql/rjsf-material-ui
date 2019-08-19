@@ -23,7 +23,7 @@ class RawMenuAppBar extends React.Component<any, any> {
   };
 
   render() {
-    const { classes, onSelectMenuItem } = this.props;
+    const { classes, onSelectMenuItem, selectedMenuItem } = this.props;
     const { drawerOpen } = this.state;
 
     return (
@@ -49,6 +49,7 @@ class RawMenuAppBar extends React.Component<any, any> {
           open={drawerOpen}
           toggleDrawer={this.toggleDrawer}
           onSelectMenuItem={onSelectMenuItem}
+          selectedMenuItem={selectedMenuItem}
         />
       </AppBar>
     );
