@@ -152,6 +152,7 @@ const DefaultFixedArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
           className="array-item-add"
           onClick={props.onAddClick}
           disabled={props.disabled || props.readonly}
+          label={props.uiSchema.buttonLabel}
         />
       )}
     </fieldset>
@@ -192,6 +193,7 @@ const DefaultNormalArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
                     className="array-item-add"
                     onClick={props.onAddClick}
                     disabled={props.disabled || props.readonly}
+                    label={props.uiSchema.buttonLabel}
                   />
                 </Box>
               </Grid>
