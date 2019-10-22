@@ -1156,9 +1156,9 @@
     "@types/react" "*"
 
 "@types/react-jsonschema-form@^1.6.2":
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/@types/react-jsonschema-form/-/react-jsonschema-form-1.6.2.tgz#52c229b5cad2bca079cd92942f5a4263cefd6c31"
-  integrity sha512-cala+2p8fNolSEJm4rqfJx0HkBavPtvfwF6WISJoFI7I/qpD5p4tXY6oc4oNsoxBHlB1/4FFiJDjLwV9fIIYnA==
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/@types/react-jsonschema-form/-/react-jsonschema-form-1.6.5.tgz#17ae657cce4156f41e878c41e7e6d50b5c031c36"
+  integrity sha512-cE7dHz00jp0OzplQlP4p/3460jJLdXskXh45O0m7thnqqbilxPi77P7fOEeVxmbSHEA4tSRqLK/9cbHuthdhKA==
   dependencies:
     "@types/json-schema" "*"
     "@types/react" "*"
