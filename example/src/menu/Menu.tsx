@@ -27,31 +27,33 @@ class RawMenuAppBar extends React.Component<any, any> {
     const { drawerOpen } = this.state;
 
     return (
-      <AppBar position="static" className={classes.toolbar}>
-        <Toolbar>
-          <Hidden only={['lg', 'xl']}>
-            <IconButton
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="Menu"
-              onClick={this.toggleDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Hidden>
-          <div className={classes.flexCtr}>
-            <Typography variant="h6" color="inherit">
-              {pkg.name}
-            </Typography>
-          </div>
-        </Toolbar>
+      <>
+        <AppBar position="static" className={classes.toolbar}>
+          <Toolbar>
+            <Hidden only={['lg', 'xl']}>
+              <IconButton
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="Menu"
+                onClick={this.toggleDrawer(true)}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Hidden>
+            <div className={classes.flexCtr}>
+              <Typography variant="h6" color="inherit">
+                {pkg.name}
+              </Typography>
+            </div>
+          </Toolbar>
+        </AppBar>
         <LeftDrawer
           open={drawerOpen}
           toggleDrawer={this.toggleDrawer}
           onSelectMenuItem={onSelectMenuItem}
           selectedMenuItem={selectedMenuItem}
         />
-      </AppBar>
+      </>
     );
   }
 }
