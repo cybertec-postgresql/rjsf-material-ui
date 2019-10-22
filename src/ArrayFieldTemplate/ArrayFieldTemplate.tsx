@@ -193,7 +193,11 @@ const DefaultNormalArrayFieldTemplate = (props: ArrayFieldTemplateProps) => {
                     className="array-item-add"
                     onClick={props.onAddClick}
                     disabled={props.disabled || props.readonly}
-                    label={props.uiSchema.buttonLabel}
+                    {...(props.uiSchema['ui:options'] && {
+                      label: props.uiSchema['ui:options'][
+                        'addButtonLabel'
+                      ] as string,
+                    })}
                   />
                 </Box>
               </Grid>
