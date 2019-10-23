@@ -3,23 +3,8 @@
     "Color": {
       "title": "Color",
       "type": "string",
-      "anyOf": [
-        {
-          "type": "string",
-          "enum": ["#ff0000"],
-          "title": "Red"
-        },
-        {
-          "type": "string",
-          "enum": ["#00ff00"],
-          "title": "Green"
-        },
-        {
-          "type": "string",
-          "enum": ["#0000ff"],
-          "title": "Blue"
-        }
-      ]
+      "enum": ["#ff0000", "#00ff00", "#0000ff"],
+      "enumNames": ["Red", "Green", "Blue"]
     },
     "Toggle": {
       "title": "Toggle",
