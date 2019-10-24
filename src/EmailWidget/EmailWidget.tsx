@@ -41,7 +41,6 @@ const EmailWidget = ({
         autoFocus={autofocus}
         required={required}
         disabled={disabled || readonly}
-        name={name}
         type="email"
         value={value ? value : ''}
         onChange={_onChange}
