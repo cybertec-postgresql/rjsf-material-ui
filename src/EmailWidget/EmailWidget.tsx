@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 
 import { WidgetProps } from 'react-jsonschema-form';
 
-const TextWidget = ({
+const EmailWidget = ({
   id,
   required,
   readonly,
@@ -41,7 +41,7 @@ const TextWidget = ({
         autoFocus={autofocus}
         required={required}
         disabled={disabled || readonly}
-        type="text"
+        type="email"
         value={value ? value : ''}
         onChange={_onChange}
         onBlur={_onBlur}
@@ -51,4 +51,4 @@ const TextWidget = ({
   );
 };
 
-export default TextWidget;
+export default EmailWidget;
