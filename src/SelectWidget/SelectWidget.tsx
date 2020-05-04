@@ -75,6 +75,7 @@ const SelectWidget = ({
       fullWidth={true}
       //error={!!rawErrors}
       required={required}
+      disabled={disabled || readonly}
     >
       <InputLabel shrink={true} htmlFor={id}>
         {label || schema.title}
