@@ -14,6 +14,12 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
+# Archived
+
+Migrate to the [`@rjsf/material-ui`](https://github.com/rjsf-team/react-jsonschema-form) package instead.
+
+---
+
 [![Build Status][build-shield]][build-url]
 [![npm][npm-shield]][npm-url]
 [![npm downloads][npm-dl-shield]][npm-dl-url]
@@ -154,5 +160,4 @@ Project Link: [https://cybertec-postgresql.github.io/rjsf-material-ui](https://c
 [npm-url]: https://www.npmjs.com/package/rjsf-material-ui
 [npm-dl-shield]: https://img.shields.io/npm/dm/rjsf-material-ui.svg?style=flat-square
 [npm-dl-url]: https://www.npmjs.com/package/rjsf-material-ui
-
 [product-screenshot]: https://raw.githubusercontent.com/cybertec-postgresql/rjsf-material-ui/master/screenshot.png
